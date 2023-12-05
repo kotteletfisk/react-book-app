@@ -8,7 +8,6 @@ import {
   createRoutesFromElements,
   Route,
 } from "react-router-dom";
-
 import ErrorPage from "./Errorpage.jsx";
 import bookFacade from "./bookFacade";
 import MainLayout from "./MainLayout";
@@ -20,6 +19,7 @@ import Home from "./Home.jsx";
 function App() {
   const [books, setBooks] = useState(bookFacade.getBooks());
 
+  //  necessary?
   useEffect(() => {
     setBooks(bookFacade.getBooks());
   }, []);
